@@ -17,8 +17,8 @@ public class ConfigurationProperties {
 	@Value("${password}")
 	private String password;
 	
-	@Value("${txtWelcome}")
-	private String txtWelcome;
+	@Value("${textUser}")
+	private String textUser;
 
 	public String getBrowser() {
 		return browser;
@@ -44,13 +44,15 @@ public class ConfigurationProperties {
 		this.password = password;
 	}
 
-	public String getTxtWelcome() {
-		return txtWelcome;
+	public String getTextUser() {
+		return textUser;
 	}
 
-	public void setTxtWelcome(String txtWelcome) {
-		this.txtWelcome = txtWelcome;
+	public void setTextUser(String textUser) {
+		this.textUser = textUser;
 	}
+	
+	
 	
 	
 	
