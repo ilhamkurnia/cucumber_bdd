@@ -19,6 +19,9 @@ public class ConfigurationProperties {
 	
 	@Value("${textUser}")
 	private String textUser;
+	
+	@Value("${success}")
+	private String textBerhasil;
 
 	public String getBrowser() {
 		return browser;
@@ -51,6 +54,15 @@ public class ConfigurationProperties {
 	public void setTextUser(String textUser) {
 		this.textUser = textUser;
 	}
+
+	public String getTextBerhasil() {
+		return textBerhasil;
+	}
+
+	public void setTextBerhasil(String textBerhasil) {
+		this.textBerhasil = textBerhasil;
+	}
+	
 	
 	
 	
