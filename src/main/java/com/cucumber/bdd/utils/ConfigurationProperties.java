@@ -20,8 +20,14 @@ public class ConfigurationProperties {
 	@Value("${textUser}")
 	private String textUser;
 	
-	@Value("${success}")
+	@Value("${textUser}")
 	private String textBerhasil;
+	
+	@Value("${textCheckout}")
+	private String textCheckout;
+	
+	@Value("${textPayment}")
+	private String textPayment;
 
 	public String getBrowser() {
 		return browser;
@@ -62,6 +68,26 @@ public class ConfigurationProperties {
 	public void setTextBerhasil(String textBerhasil) {
 		this.textBerhasil = textBerhasil;
 	}
+
+	public String getTextCheckout() {
+		return textCheckout;
+	}
+
+	public void setTextCheckout(String textCheckout) {
+		this.textCheckout = textCheckout;
+	}
+
+	public String getTextPayment() {
+		return textPayment;
+	}
+
+	public void setTextPayment(String textPayment) {
+		this.textPayment = textPayment;
+	}
+	
+	
+	
+	
 	
 	
 	

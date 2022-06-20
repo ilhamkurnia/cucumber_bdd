@@ -37,11 +37,13 @@ private WebDriver driver;
 	private WebElement viewProductShirt;
 	
 	@FindBy(id = "add_to_cart")
-	private WebElement btnAddToCart;	
+	private WebElement btnAddToCart;
 	
 	@FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a")
-	private WebElement btnContinue;
+	private WebElement btnProceed;
 	
+	@FindBy(className = "navigation_page")
+	private WebElement txtAfterCheckout;
 	
 	public void OrderProductWomen() {
 		btnWomen.click();
@@ -50,7 +52,7 @@ private WebDriver driver;
 		changeLayer(driver);
 		btnAddToCart.click();
 		driver.switchTo().defaultContent();
-		btnContinue.click();
+		btnProceed.click();
 	}
 	
 	public void OrderProductDress() {
@@ -60,7 +62,7 @@ private WebDriver driver;
 		changeLayer(driver);
 		btnAddToCart.click();
 		driver.switchTo().defaultContent();
-		btnContinue.click();
+		btnProceed.click();
 	}
 	
 	public void OrderProductShirt() {
@@ -69,8 +71,9 @@ private WebDriver driver;
 		tunggu(5);
 		changeLayer(driver);
 		btnAddToCart.click();
+		tunggu(5);
 		driver.switchTo().defaultContent();
-		btnContinue.click();
+		btnProceed.click();
 	}
 	
 	public static void tunggu(int detik) {
@@ -80,6 +83,10 @@ private WebDriver driver;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public String getTxtCheckout() {
+		return txtAfterCheckout.getText();
 	}
 	
 	public static void changeLayer(WebDriver driver) {
